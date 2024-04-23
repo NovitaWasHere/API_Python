@@ -2,7 +2,7 @@ from flask import Blueprint
 from pymongo import MongoClient
 from controllers.UserController import UserController
 
-MONGO_URI=['mongodb+srv://novita:1234567890aBc@cluster.aoqznyg.mongodb.net/?retryWrites=true&w=majority']
+MONGO_URI=[os.getenv("MONGO_URL")]
 
 client = MongoClient(MONGO_URI)
 db = client['Ejemplo']
