@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/API-REST SnowChord - copia antiDuplicado/python-dotenv" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/API-REST SnowChord/python-dotenv" vcs="Git" />
   </component>
 </project>

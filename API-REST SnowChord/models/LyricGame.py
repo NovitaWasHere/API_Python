@@ -1,11 +1,13 @@
 from dataclasses import dataclass
 
-from mongoengine import Document, StringField, IntField, ListField, ObjectIdField
+from mongoengine import Document, StringField, IntField, ListField, ObjectIdField, fields, EmbeddedDocument, \
+    EmbeddedDocumentListField, DictField
+
 
 
 @dataclass()
 class LyricGame(Document):
-    lyrics = ListField(StringField(required=True))
+    lyrics = ListField(DictField(required=True))
     acordes = ListField(ObjectIdField(required=True))
     velocidad = IntField(required=True)
     cancion = ObjectIdField(required=True)
@@ -25,4 +27,5 @@ class LyricGame(Document):
             'acordes': self.acordes,
             'velocidad': self.velocidad,
             'cancion': self.cancion
+
         }

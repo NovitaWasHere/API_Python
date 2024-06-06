@@ -1,4 +1,3 @@
-import bcrypt
 from bson import json_util
 from flask import request, jsonify
 from bson.objectid import ObjectId
@@ -57,7 +56,7 @@ class LyricGameController:
             lyrics = data.get('lyrics')
             acordes = data.get('acordes')
             velocidad = data.get('velocidad')
-            cancion = data.get('velocidad')
+            cancion = data.get('cancion')
 
             if not (lyrics and acordes and velocidad):
                 return jsonify({'exito': False, 'error': 'Faltan campos obligatorios'}), 400
